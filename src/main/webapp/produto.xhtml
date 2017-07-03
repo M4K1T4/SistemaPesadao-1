@@ -51,7 +51,7 @@
 						update="listaProdutos cadastraProduto"
 						actionListener="fornecedorBean.limpar" />
 					<p:commandButton value="Salvar" action="#{produtoBean.salvar}"
-						update="listaProdutos cadastraProduto" icon="ui-icon-disk"
+						update="listaProdutos, cadastraProduto" icon="ui-icon-disk"
 						id="salvar" oncomplete="PF('dialogCadastroProduto').hide();" />
 
 					<p:commandButton value="Cancelar" action="#{produtoBean.limpar}"

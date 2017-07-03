@@ -25,14 +25,13 @@ public class ItemVenda implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -2831116836301321712L;
+	private static final long serialVersionUID = 5581416335300612662L;
 	private Integer id;
 	private Produto produtoItemVenda;
 	private PedidoVenda pedidoItemVenda;
 	private Integer quantidadeItemVenda;
 	private double valorItemVenda;
 	private Date dataCadastroItemVenda = new Date();
-	
 
 	/**
 	 * 
@@ -40,7 +39,6 @@ public class ItemVenda implements Serializable {
 	public ItemVenda() {
 		// TODO Auto-generated constructor stub
 	}
-
 
 	/**
 	 * @param id
@@ -61,7 +59,6 @@ public class ItemVenda implements Serializable {
 		this.dataCadastroItemVenda = dataCadastroItemVenda;
 	}
 
-
 	/**
 	 * @return the id
 	 */
@@ -71,17 +68,16 @@ public class ItemVenda implements Serializable {
 		return id;
 	}
 
-
 	/**
-	 * @param id the id to set
+	 * @param id
+	 *            the id to set
 	 */
 	public void setId(Integer id) {
 		this.id = id;
 	}
 
-
 	/**
-	 * @return the produtoItemVenda
+	 * @return the produtoItemCompra
 	 */
 	@ManyToOne
 	@JoinColumn
@@ -89,17 +85,16 @@ public class ItemVenda implements Serializable {
 		return produtoItemVenda;
 	}
 
-
 	/**
-	 * @param produtoItemVenda the produtoItemVenda to set
+	 * @param produtoItemCompra
+	 *            the produtoItemCompra to set
 	 */
 	public void setProdutoItemVenda(Produto produtoItemVenda) {
 		this.produtoItemVenda = produtoItemVenda;
 	}
 
-
 	/**
-	 * @return the pedidoItemVenda
+	 * @return the pedidoItemCompra
 	 */
 	@ManyToOne
 	@JoinColumn
@@ -107,65 +102,63 @@ public class ItemVenda implements Serializable {
 		return pedidoItemVenda;
 	}
 
-
 	/**
-	 * @param pedidoItemVenda the pedidoItemVenda to set
+	 * @param pedidoItemCompra
+	 *            the pedidoItemCompra to set
 	 */
 	public void setPedidoItemVenda(PedidoVenda pedidoItemVenda) {
 		this.pedidoItemVenda = pedidoItemVenda;
 	}
 
-
 	/**
-	 * @return the quantidadeItemVenda
+	 * @return the quantidadeItemCompra
 	 */
 	public Integer getQuantidadeItemVenda() {
 		return quantidadeItemVenda;
 	}
 
-
 	/**
-	 * @param quantidadeItemVenda the quantidadeItemVenda to set
+	 * @param quantidadeItemCompra
+	 *            the quantidadeItemCompra to set
 	 */
 	public void setQuantidadeItemVenda(Integer quantidadeItemVenda) {
 		this.quantidadeItemVenda = quantidadeItemVenda;
 	}
 
-
 	/**
-	 * @return the valorItemVenda
+	 * @return the valorItemCompra
 	 */
 	public double getValorItemVenda() {
 		return valorItemVenda;
 	}
 
-
 	/**
-	 * @param valorItemVenda the valorItemVenda to set
+	 * @param valorItemCompra
+	 *            the valorItemCompra to set
 	 */
 	public void setValorItemVenda(double valorItemVenda) {
 		this.valorItemVenda = valorItemVenda;
 	}
 
-
 	/**
-	 * @return the dataCadastroItemVenda
+	 * @return the dataCadastroItemCompra
 	 */
 	@Temporal(TemporalType.DATE)
 	public Date getDataCadastroItemVenda() {
 		return dataCadastroItemVenda;
 	}
 
-
 	/**
-	 * @param dataCadastroItemVenda the dataCadastroItemVenda to set
+	 * @param dataCadastroItemCompra
+	 *            the dataCadastroItemCompra to set
 	 */
 	public void setDataCadastroItemVenda(Date dataCadastroItemVenda) {
 		this.dataCadastroItemVenda = dataCadastroItemVenda;
 	}
 
-
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
@@ -175,11 +168,13 @@ public class ItemVenda implements Serializable {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
-
-
-	/* (non-Javadoc)
+	
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -196,9 +191,11 @@ public class ItemVenda implements Serializable {
 			return false;
 		return true;
 	}
-
-
-	/* (non-Javadoc)
+	
+	
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -207,4 +204,6 @@ public class ItemVenda implements Serializable {
 				+ ", quantidadeItemVenda=" + quantidadeItemVenda + ", valorItemVenda=" + valorItemVenda
 				+ ", dataCadastroItemVenda=" + dataCadastroItemVenda + "]";
 	}
+
+	
 }

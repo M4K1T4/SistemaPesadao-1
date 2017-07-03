@@ -110,6 +110,7 @@ public class ContaReceber implements Serializable {
 	/**
 	 * @return the descricaoContaReceber
 	 */
+	@Column(columnDefinition = "VARCHAR(255) NULL DEFAULT 'Referente a produto já cadastrado'")
 	public String getDescricaoContaReceber() {
 		return descricaoContaReceber;
 	}

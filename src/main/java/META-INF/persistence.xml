@@ -33,14 +33,14 @@
 		CREATE TRIGGER ITEMVENDA_CONTARECEBER AFTER INSERT
 		ON ITEMVENDA FOR EACH ROW
 		UPDATE contareceber SET contareceber.valorContaReceber = contareceber.valorContaReceber +
-		(NEW.quantidadeItemVenda * itemvenda.valorItemCompra)
+		(NEW.quantidadeItemVenda * NEW.valorItemVenda)
 		WHERE contareceber.pedidoContaReceber_id = NEW.pedidoItemVenda_id;
 		
 		CREATE TRIGGER ITEMVENDA_ESTOQUE AFTER INSERT
 		ON ITEMVENDA FOR EACH ROW
 		UPDATE ESTOQUE SET estoque.quantidadeEstoque = ESTOQUE.quantidadeEstoque +
 		NEW.quantidadeItemVenda, ESTOQUE.totalEstoque = ESTOQUE.totalEstoque +
-		(NEW.quantidadeItemVenda * itemvenda.valorItemCompra)
+		(NEW.quantidadeItemVenda * NEW.valorItemVenda)
 		WHERE NEW.produtoItemVenda_id = estoque.produtoEstoque_id;
 		
 		CREATE TRIGGER PEDIDOVENDA_CONTARECEBER AFTER INSERT

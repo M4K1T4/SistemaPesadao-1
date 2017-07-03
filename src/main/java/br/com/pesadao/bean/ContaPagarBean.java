@@ -39,7 +39,7 @@ public class ContaPagarBean {
 	}
 	
 	public void limpar() {
-		
+		this.contaPagar = new ContaPagar();
 	}
 
 	/**

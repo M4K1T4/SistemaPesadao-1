@@ -12,8 +12,8 @@
 			<h:form id="cadastraContaPagar">
 				<p:growl id="growl" life="2000" />
 
-				<p:commandButton value="Cadastrar conta a pagar" id="cadastrarContaPagar"
-					styleClass="ui-priority-primary"
+				<p:commandButton value="Cadastrar conta a pagar"
+					id="cadastrarContaPagar" styleClass="ui-priority-primary"
 					oncomplete="PF('dialogCadastroContaPagar').show();" />
 
 				<p:confirmDialog widgetVar="dialogCadastroContaPagar"
@@ -22,11 +22,11 @@
 
 					<h:panelGrid columns="2" cellpadding="5">
 						<p:outputLabel for="descricao" value="Descrição: " />
-						<p:inputText id="descricao" type="text" title="descricao" required="true"
-							requiredMessage="Preencha o campo descricao."
+						<p:inputText id="descricao" type="text" title="descricao"
+							required="true" requiredMessage="Preencha o campo descricao."
 							value="#{contaPagarBean.contaPagar.descricaoContaPagar}">
 						</p:inputText>
-						
+
 						<p:outputLabel for="valor" value="Valor: " />
 						<p:inputText id="valor" type="text" title="valor" required="true"
 							requiredMessage="Preencha o campo valor."
@@ -47,7 +47,7 @@
 		</p:panel>
 
 
-		<p:panel header="Lista de ContaPagars">
+		<p:panel header="Lista de ContaPagar">
 
 			<h:form id="listaContaPagars">
 				<p:dataTable id="tableContaPagar" var="contaPagar"

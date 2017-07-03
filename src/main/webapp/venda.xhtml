@@ -11,8 +11,8 @@
 
 		<!-- Inicio Panel de pedidoVenda*********************************************************** -->
 		<h:form id="cadastraPedidoVenda">
+			<p:growl id="growl" life="2000" />
 			<p:panel header="Cadastrar pedido">
-				<p:growl id="growl" life="2000" />
 				<h:panelGrid columns="2" cellpadding="5">
 
 					<p:outputLabel for="cliente" value="Cliente: " />
@@ -38,7 +38,6 @@
 
 				<p:blockUI block="itemVenda" widgetVar="blockItemVenda"
 					blocked="true" />
-<<<<<<< HEAD
 					
 			</p:panel>
 		</h:form>
@@ -58,7 +57,7 @@
 
 					<p:column>
 						<f:facet name="header">
-							<h:outputText value="Cliente" />
+							<h:outputText value="Produto" />
 						</f:facet>
 						<h:outputText
 							value="#{itemVenda.produtoItemVenda.descricaoProduto}" />
@@ -75,7 +74,7 @@
 						<f:facet name="header">
 							<h:outputText value="Valor: " />
 						</f:facet>
-						<h:outputText value="#{itemVenda.valorItemCompra}" />
+						<h:outputText value="#{itemVenda.valorItemVenda}" />
 					</p:column>
 
 					<p:column>
@@ -135,14 +134,14 @@
 						<p:outputLabel for="valor" value="Valor: " />
 						<p:inputText id="valor" type="text" title="Valor: "
 							required="true" requiredMessage="Preencha o campo valor"
-							value="#{itemVendaBean.itemVenda.valorItemCompra}">
+							value="#{itemVendaBean.itemVenda.valorItemVenda}">
 						</p:inputText>
 					</h:panelGrid>
 					<!-- Final cadastro de venda*********************************************************** -->
 
 					<p:commandButton value="Salvar"
-						action="#{itemVendaBean.salvar(pedidoVenda)}"
-						update="itemVenda" icon="ui-icon-disk" id="salvar"
+						action="#{itemVendaBean.salvar}"
+						update="itemVenda tabelaItemVenda" icon="ui-icon-disk" id="salvar"
 						oncomplete="PF('dialogCadastroItemVenda').hide();">
 						<f:setPropertyActionListener
 							target="#{itemVendaBean.itemVenda.pedidoItemVenda}"

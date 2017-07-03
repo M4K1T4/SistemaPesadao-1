@@ -110,7 +110,7 @@ public class ContaPagar implements Serializable {
 	/**
 	 * @return the descricaoContaPagar
 	 */
-	@Column(columnDefinition = "VARCHAR(255) NULL DEFAULT 'Conta referente a produto já cadastrado'")
+	@Column(columnDefinition = "VARCHAR(255) NULL DEFAULT 'Referente a produto já cadastrado'")
 	public String getDescricaoContaPagar() {
 		return descricaoContaPagar;
 	}

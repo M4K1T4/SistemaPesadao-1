@@ -38,7 +38,7 @@ public class ProdutoBean {
 		produtos = new ProdutoDao().listarProdutos();
 		produto = new Produto();
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Produto cadastrado com sucesso!"));
-		return "produtolist";
+		return "produto";
 	}
 	
 	public String editar(Produto produto){

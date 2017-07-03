@@ -140,8 +140,8 @@
 					<!-- Final cadastro de compra*********************************************************** -->
 
 					<p:commandButton value="Salvar"
-						action="#{itemCompraBean.salvar(pedidoCompra)}"
-						update="itemCompra" icon="ui-icon-disk" id="salvar"
+						action="#{itemCompraBean.salvar}"
+						update="itemCompra tabelaItemCompra" icon="ui-icon-disk" id="salvar"
 						oncomplete="PF('dialogCadastroItemCompra').hide();">
 						<f:setPropertyActionListener
 							target="#{itemCompraBean.itemCompra.pedidoItemCompra}"

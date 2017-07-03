@@ -14,7 +14,6 @@ import javax.faces.context.FacesContext;
 import br.com.pesadao.dao.ItemCompraDao;
 import br.com.pesadao.dao.ProdutoDao;
 import br.com.pesadao.model.ItemCompra;
-import br.com.pesadao.model.PedidoCompra;
 import br.com.pesadao.model.Produto;
 
 /**
@@ -44,7 +43,6 @@ public class ItemCompraBean {
 
 	public void excluir() {
 		new ItemCompraDao().excluir(itemCompra);
-		new ItemCompraDao().salvar(itemCompra);
 		produtos = new ProdutoDao().listarProdutos();
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Item excluído com sucesso!"));
 		itensCompra = new ItemCompraDao().listarItensCompra(pedidoCompraBean.getUltimoPedido().getId());
